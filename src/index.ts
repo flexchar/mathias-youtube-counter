@@ -50,47 +50,52 @@ app.get('/', async (c) => {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Counter</title>
-<style>
-  body {
-    background-color: darkgrey;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  .counter-container {
-    background-color: #ffffff;
-    padding: 20px;
-    border: 2px solid #000000;
-    box-shadow: 5px 5px 0px #000000;
-  }
-  .title {
-    font-size: 20px;
-    color: #333333;
-    margin: 0 0 10px 0;
-  }
-  .number {
-    font-size: 50px;
-    color: #000000;
-    margin: 0;
-    text-align: right;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <style>
+    body {
+      background-color: darkgrey;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .counter-container {
+      background-color: #ffffff;
+      padding: 20px;
+      border: 2px solid #000000;
+      box-shadow: 5px 5px 0px #000000;
+    }
+    .title {
+      font-size: 20px;
+      color: #333333;
+      margin: 0 0 10px 0;
+    }
+    .number {
+      font-size: 50px;
+      color: #000000;
+      margin: 0;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
-<div class="counter-container">
-  <p class="title">Subscribers</p>
-  <p class="number">${smiirlResponse.number.toLocaleString('lt-LT')}</p>
-  <p class="title">Views</p>
-  <p class="number">${smiirlResponse.views.toLocaleString('lt-LT')}</p>
-  <p class="title">Videos</p>
-  <p class="number">${smiirlResponse.videos.toLocaleString('lt-LT')}</p>
-</div>
+  <div class="counter-container">
+    <p class="title">Subscribers</p>
+    <p class="number">${smiirlResponse.number.toLocaleString('lt-LT')}</p>
+    <p class="title">Views</p>
+    <p class="number">${smiirlResponse.views.toLocaleString('lt-LT')}</p>
+    <p class="title">Videos</p>
+    <p class="number">${smiirlResponse.videos.toLocaleString('lt-LT')}</p>
+  </div>
+  <script>
+    setTimeout(function(){
+      window.location.reload(1);
+    }, 10_000);
+  </script>
 </body>
 </html>
 `;
